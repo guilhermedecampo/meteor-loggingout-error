@@ -1,0 +1,17 @@
+<body>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>User Problem!</h1>
+
+  {{#if currentUser}}
+    <input type="button" class="logout" value="Logout" />
+  {{else}}
+    <input type="button" class="login" value="Login" />
+  {{/if}}
+
+  {{#if loggingIn}}
+    <h2 class="main-startup">Loading...</h2>
+  {{/if}}
+</template>
